@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Luxe Bags</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-container {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 28px;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+        color: #ddd;
+    }
+
+    .checkout-form {
+        max-width: 500px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .checkout-form input, .checkout-form textarea, .checkout-form select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .checkout-form button {
+        width: 100%;
+        padding: 12px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .checkout-form button:hover {
+        background-color: #218838;
+    }
+
+    .notification {
+        margin: 20px;
+        padding: 15px;
+        background-color: #28a745;
+        color: white;
+        border-radius: 5px;
+        text-align: center;
+        display: none;
+    }
+</style>
+<body>
+
+<header>
+    <div class="nav-container">
+        <div class="logo">Luxe Bags</div>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="about.html#about">About</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html#login">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="checkout-form">
+    <h2>Checkout</h2>
+    <form id="checkout-form">
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required><br><br>
+    
+        <label for="address">Alamat:</label>
+        <textarea id="address" name="address" placeholder="Masukkan alamat Anda" required></textarea><br><br>
+    
+        <label for="payment-method">Metode Pembayaran:</label>
+        <select id="payment-method" name="payment-method" required>
+            <option value="credit-card">Kartu Kredit</option>
+            <option value="bank-transfer">Transfer Bank</option>
+            <option value="paypal">PayPal</option>
+        </select><br><br>
+    
+        <button type="submit">Konfirmasi Pembelian</button>
+    </form>
+    
+</div>
+
+<div id="notification" class="notification"></div>
+
+<script>
+    document.getElementById("checkout-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Mencegah refresh halaman
+
+        // Ambil nilai dari inputan
+        let name = document.getElementById("name").value;
+        let address = document.getElementById("address").value;
+        let paymentMethod = document.getElementById("payment-method").value;
+
+        // Validasi input
+        if (name && address && paymentMethod) {
+            // Simpan data checkout di localStorage
+            let checkoutData = {
+                name: name,
+                address: address,
+                paymentMethod: payment-method,
+            };
+            localStorage.setItem("checkoutData", JSON.stringify(checkoutData));
+
+            // Menampilkan notifikasi
+            showNotification('Checkout berhasil! Menunggu konfirmasi...');
+
+            // Alihkan ke halaman terima kasih
+            setTimeout(() => {
+                window.location.href = 'thankyou.html'; // Pindah ke halaman terima kasih
+            }, 2000);
+        } else {
+            alert("Mohon isi semua field.");
+        }
+    });
+
+    function showNotification(message) {
+        const notification = document.getElementById('notification');
+        notification.textContent = message;
+        notification.style.display = 'block';
+        setTimeout(() => {
+            notification.style.display = 'none';
+        }, 3000);
+    }
+</script>
+
+<footer>
+    <p>&copy; 2025 Luxe Bags. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Luxe Bags</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+        body {
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+            color: #333;
+            transition: background 0.5s ease;
+        }
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: black;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        header .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: black;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+            font-size: 1.3rem;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        nav ul li a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #8fffd6;
+            transition: width 0.3s ease;
+        }
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        .hero-section {
+            text-align: center;
+            margin: 4rem auto;
+            font-size: 3rem;
+            font-weight: bold;
+            position: relative;
+            color: #444;
+            animation: fadeSlide 1s ease forwards;
+        }
+        @keyframes fadeSlide {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .image-section {
+            text-align: center;
+            margin: 3rem auto;
+            animation: zoomIn 1s ease forwards;
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        .image-section img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+        .image-section img:hover {
+            transform: scale(1.05);
+        }
+        .about-section {
+            padding: 4rem;
+            text-align: center;
+            max-width: 900px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        .about-section h1 {
+            font-size: 2.7rem;
+            margin-bottom: 1.5rem;
+            color: #222;
+        }
+        .about-section p {
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #555;
+            font-size: 1.2rem;
+        }
+        .scroll-section {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .visible {
+            display: block;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <a href="#" class="logo">Luxe Bags</a>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="hero-section">
+    "Bawa gaya hidup mewah dalam setiap langkahmu. Temukan koleksi tas yang membuatmu semakin berkelas."
+</div>
+<div class="image-section">
+    <img src="download (22).jpg" alt="LUXE BAGS">
+</div>
+<div class="about-section">
+    <h1>Sebagai pecinta fashion dan kualitas, kami percaya bahwa tas lebih dari sekadar aksesori.</h1>
+    <p>Sejak awal berdiri, Luxe Bags selalu berkomitmen untuk menghadirkan tas berkualitas tinggi dengan desain yang elegan dan timeless. Kami memahami bahwa setiap tas yang Anda pilih adalah cerminan dari kepribadian dan gaya hidup Anda.</p>
+    <p>Dalam perjalanan kami mencari keunggulan, kami hanya memilih bahan premium dan bekerja sama dengan pengrajin terbaik. Setiap detail dipertimbangkan dengan cermat agar Anda mendapatkan produk yang tidak hanya indah tetapi juga tahan lama dan nyaman digunakan.</p>
+    <p>Luxe Bags hadir dengan keyakinan bahwa keindahan tidak perlu mengorbankan kualitas. Melalui koleksi kami, kami ingin setiap pelanggan merasakan kebanggaan dan percaya diri saat membawa tas yang dirancang dengan penuh ketelitian dan rasa cinta terhadap fashion.</p>
+</div>
+<script>
+    window.addEventListener('scroll', function() {
+        var scrollSection = document.getElementById('more-content');
+        if (window.scrollY > 300) {
+            scrollSection.classList.add('visible');
+        }
+    });
+</script>
+</body>
+</html>

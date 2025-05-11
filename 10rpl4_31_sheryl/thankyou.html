@@ -1,0 +1,59 @@
+<!-- Thank You Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Luxe Bags</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <div class="logo">Luxe Bags</div>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="about.html#about">About</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html#login">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div id="thank-you">
+    <h2>Thank You for Your Purchase!</h2>
+    <p>Your order has been successfully placed. We are preparing your items for delivery.</p>
+
+    <h3>Order Summary:</h3>
+    <div id="order-summary"></div>
+
+    <!-- Button to proceed to confirmation -->
+    <button onclick="goToConfirmation()">Confirm Purchase and Proceed</button>
+</div>
+
+<script>
+    function displayOrderSummary() {
+        let selectedItems = JSON.parse(localStorage.getItem('selectedItems')) || [];
+        let orderSummaryDiv = document.getElementById('order-summary');
+        selectedItems.forEach(item => {
+            orderSummaryDiv.innerHTML += `<p>${item.name} - IDR ${item.price.toLocaleString('id-ID')}</p>`;
+        });
+    }
+
+    function goToConfirmation() {
+        window.location.href = 'confirmation.html';  // Redirect to confirmation page
+    }
+
+    window.onload = displayOrderSummary;
+</script>
+
+<footer>
+    <p>&copy; 2025 Luxe Bags. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

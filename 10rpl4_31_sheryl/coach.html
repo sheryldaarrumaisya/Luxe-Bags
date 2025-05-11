@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Branded Bags</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+}
+</style>
+<body>
+
+<!-- Navbar -->
+<header>
+    <div class="nav-container">
+        <div class="logo">Luxe Bags</div>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="about.html#about">About</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Shop Section -->
+<section id="shop" class="shop">
+    <div class="container">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 12.52.55_14013023.jpg" alt="Bag 1">
+                <h3>Coach Tabby Shoulder Bag 26 With Signature Canvas Chalk Tan Balck</h3>
+                <p>IDR 1.048.100</p>
+                <button onclick="addToCart('Coach Tabby Shoulder Bag 26 With Signature Canvas Chalk Tan Balck', 1048100)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 12.54.04_25a7b479.jpg" alt="Bag 2">
+                <h3>Coach Carmen Shoulder Bag Women Coach Package</h3>
+                <p>IDR 1.211.660</p>
+                <button onclick="addToCart('Coach Carmen Shoulder Bag Women Coach Package', 1211660)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 12.55.48_08fd020e.jpg" alt="Bag 3">
+                <h3>Coach Signature Mini Sierra Satchel Coach Handbag  Shoulder Bag Tas Wanita</h3>
+                <p>IDR 1.236.100</p>
+                <button onclick="addToCart('Coach Signature Mini Sierra Satchel Coach Handbag  Shoulder Bag Tas Wanita', 1236100)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <script src="cart.js"></script>
+</section>
+</body>
+</html>
