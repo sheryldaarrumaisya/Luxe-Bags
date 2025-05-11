@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice - Branded Bags</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color:rgb(255, 255, 255)
+    }
+</style>
+<body>
+
+<!-- Navbar -->
+<header>
+    <div class="nav-container">
+        <div class="logo">Luxe Bags</div>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="about.html#about">About</a></li>
+                <li><a href="shop.html#shop">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Invoice Section -->
+<section id="invoice" class="invoice">
+    <div class="container">
+        <h2>Invoice</h2>
+        <!-- Table for displaying product details -->
+        <table class="invoice-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="invoice-items">
+                <!-- Dynamic product rows will go here -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3"><strong>Subtotal</strong></td>
+                    <td id="subtotal">0.00</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><strong>Shipping</strong></td>
+                    <td>20.00</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><strong>Total</strong></td>
+                    <td id="total"><strong>0.00</strong></td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <button onclick="window.print()" class="print-btn">Print Invoice</button>
+    </div>
+    <div id="invoice">
+        <h2>Invoice</h2>
+        <!-- Display selected items from localStorage -->
+        <div id="invoice-details"></div>
+    
+        <!-- Add a button for confirming the purchase -->
+        <center><button onclick="goToConfirmationPage()">Confirm Purchase</button></center> <!-- Tombol Konfirmasi Pembelian -->
+    </div>
+    
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Branded Bags. All rights reserved.</p>
+</footer>
+
+<script>
+    function generateInvoice() {
+        let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+        let invoiceItems = document.getElementById('invoice-items');
+        let subtotal = 0;
+
+        // Clear previous invoice items
+        invoiceItems.innerHTML = '';
+
+        // Add products to the invoice
+        cartItems.forEach(item => {
+            let total = item.price * item.quantity;
+            subtotal += total;
+
+            // Add table row for each item
+            invoiceItems.innerHTML += `
+                <tr>
+                    <td>${item.name}</td>
+                    <td>${item.quantity}</td>
+                    <td>IDR ${item.price.toLocaleString('id-ID')}</td>
+                    <td>IDR ${total.toLocaleString('id-ID')}</td>
+                </tr>
+            `;
+        });
+
+        // Calculate total amount
+        let shipping = 20.00;
+        let totalAmount = subtotal + shipping;
+
+        // Update subtotal and total
+        document.getElementById('subtotal').innerText = `IDR ${subtotal.toLocaleString('id-ID')}`;
+        document.getElementById('total').innerHTML = `<strong>IDR ${totalAmount.toLocaleString('id-ID')}</strong>`;
+    }
+
+    // Generate invoice when the page loads
+    window.onload = generateInvoice;
+    function goToConfirmationPage() {
+        window.location.href = 'confirmation.html';  // Redirect to confirmation page
+    }
+</script>
+
+</body>
+</html>

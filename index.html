@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branded Bags</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(90deg, #000, #444);
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #8fffd6;
+        }
+        .hero {
+            background: url('Luxurious bag closet.jpg') center/cover no-repeat;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+        .hero h1 {
+            font-size: 4rem;
+        }
+        .cta-button {
+            background: #d2af66;
+            color: black;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        .cta-button:hover {
+            background: #a14c44;
+        }
+        .category-grid {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            padding: 2rem;
+        }
+        .category-item {
+            position: relative;
+            overflow: hidden;
+        }
+        .category-item img {
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+        .category-item:hover img {
+            transform: scale(1.05);
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">Luxe Bags</div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+</header>
+<section class="hero">
+    <div>
+        <h1>Tampil Mewah dengan Luxe Bags</h1>
+        <p>Elegan, berkelas, dan selalu tepat untuk setiap momen.</p>
+        <a href="shop.html" class="cta-button">Shop Now</a>
+    </div>
+</section>
+<!-- Shop By Category Section -->
+<section class="category">
+    <h2>Shop By Brand</h2>
+    <div class="category-grid">
+        <div class="category-item">
+            <img src="download (12).jpg" alt="DIOR">
+            <h3>DIOR</h3>
+            <a href="dior.html" class="shop-now">SHOP NOW</a>
+        </div>
+        <div class="category-item">
+            <img src="download (13).jpg" alt="GUCCI">
+            <h3>GUCCI</h3>
+            <a href="gucci.html" class="shop-now">SHOP NOW</a>
+        </div>
+        <div class="category-item">
+            <img src="download (14).jpg" alt="LOUIS VUITTON">
+            <h3>LOUIS VUITTON</h3>
+            <a href="louis.html" class="shop-now">SHOP NOW</a>
+        </div>
+        <div class="category-item">
+            <img src="download (15).jpg" alt="CHANNEL">
+            <h3>CHANNEL</h3>
+            <a href="channel.html" class="shop-now">SHOP NOW</a>
+        </div>
+        <div class="category-item">
+            <img src="WhatsApp Image 2025-05-11 at 09.42.37_8bd54511.jpg" alt="BOSTANTEN">
+            <h3>BOSTANTEN</h3>
+            <a href="bostanten.html" class="shop-now">SHOP NOW</a>
+        </div>
+        <div class="category-item">
+            <img src="WhatsApp Image 2025-05-11 at 09.42.37_aa0e01b0.jpg" alt="MOSSDOOM">
+            <h3>MOSSDOOM</h3>
+            <a href="mossdoom.html" class="shop-now">SHOP NOW</a>
+        </div>
+        <div class="category-item">
+            <img src="WhatsApp Image 2025-05-11 at 12.34.39_ac6eb7e4.jpg" alt="JIMS HONEY">
+            <h3>JIMS HONEY</h3>
+            <a href="jims honey.html" class="shop-now">SHOP NOW</a>
+        </div>
+        <div class="category-item">
+            <img src="WhatsApp Image 2025-05-11 at 12.43.40_8051fb24.jpg" alt="CORALDAISY">
+            <h3>CORALDAISY</h3>
+            <a href="coral.html" class="shop-now">SHOP NOW</a>
+        </div>
+        <div class="category-item">
+            <img src="download (19).jpg" alt="COACH">
+            <h3>COACH</h3>
+            <a href="coach.html" class="shop-now">SHOP NOW</a>
+        </div>
+    </div>
+</section>
+
+<!-- Shop Section -->
+<section id="shop" class="shop">
+    <div class="container">
+        <h2>Best Seller</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="download (8).jpg" alt="MOSSDOOM">
+                <h3>MOSSDOOM Kattie Bag Slingbag</h3>
+                <p>IDR 154.900</p>
+                <button onclick="addToCart('MOSSDOOM Kattie Bag Slingbag', 154.900)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="download (9).jpg" alt="BOSTANTEN">
+                <h3>BOSTANTEN Ivan Gunawan Pick 3 in 1</h3>
+                <p>IDR 189.900</p>
+                <button onclick="addToCart('BOSTANTEN Ivan Gunawan Pick 3 in 1', 189.900)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="download (11).jpg" alt="DIOR">
+                <h3>Tas C Dor La dyy 24 cm White Lambskin Leather</h3>
+                <p>IDR 2.087.999</p>
+                <button onclick="addToCart('Tas C Dor La dyy 24 cm White Lambskin Leather', 2087999)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <script src="cart.js"></script>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Branded Bags. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Luxe Bags</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-container {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 28px;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+        color: #ddd;
+    }
+
+    .checkout-form {
+        width: 50%;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .checkout-form input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .checkout-form button {
+        padding: 12px 24px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        display: block;
+        margin: 20px auto;
+    }
+
+    .checkout-form button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Confirmation message */
+    #confirmation-message {
+        background-color: #28a745;
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        display: none;
+    }
+
+    #ok-button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    #ok-button:hover {
+        background-color: #0056b3;
+    }
+</style>
+<body>
+
+<header>
+    <div class="nav-container">
+        <div class="logo">Luxe Bags</div>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="about.html#about">About</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html#login">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="checkout-form">
+    <h2>Checkout</h2>
+    <form id="checkout-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+
+        <label for="payment-method">Payment Method:</label>
+        <select id="payment-method" name="payment-method" required>
+            <option value="">Select Payment Method</option>
+            <option value="Credit Card">Credit Card</option>
+            <option value="PayPal">PayPal</option>
+            <option value="COD">COD</option>
+            <option value="Bank Transfer">Bank Transfer</option>
+        </select>
+
+        <button type="submit">Confirm Purchase</button>
+    </form>
+</div>
+
+<div id="confirmation-message">
+    <p>Your purchase was successful! Thank you for your order.</p>
+    <button id="ok-button">OK</button>
+</div>
+
+<script>
+    document.getElementById("checkout-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form from submitting to handle data manually
+
+        let name = document.getElementById("name").value;
+        let address = document.getElementById("address").value;
+        let paymentMethod = document.getElementById("payment-method").value;
+
+        if (name && address && paymentMethod) {
+            // Save the checkout data
+            let checkoutData = {
+                name: name,
+                address: address,
+                paymentMethod: paymentMethod
+            };
+            localStorage.setItem("checkoutData", JSON.stringify(checkoutData));
+
+            // Display confirmation message
+            document.getElementById("confirmation-message").style.display = "block";
+
+            // Add event listener for the OK button
+            document.getElementById("ok-button").addEventListener("click", function() {
+                window.location.href = "index.html"; // Redirect to the homepage
+            });
+        } else {
+            alert("Please fill in all fields.");
+        }
+    });
+</script>
+
+<footer>
+    <p>&copy; 2025 Luxe Bags. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Branded Bags</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color:rgb(255, 255, 255)
+    }
+</style>
+<body>
+
+<!-- Navbar -->
+<header>
+    <div class="nav-container">
+        <div class="logo">Luxe Bags</div>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="about.html#about">About</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Shop Section -->
+<section id="shop" class="shop">
+    <div class="container">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 12.19.43_0d374d4c.jpg" alt="Bag 1">
+                <h3>BOSTANTEN Ivan Gunawan Pick Bag 3 in 1</h3>
+                <p>IDR 189.900</p>
+                <button onclick="addToCart('BOSTANTEN Ivan Gunawan Pick Bag 3 in 1', 189.900)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 12.20.46_739cbb68.jpg" alt="Bag 2">
+                <h3>BOSTANTEN Fashion Slingbag Women Shoulder Bag</h3>
+                <p>IDR 149.999</p>
+                <button onclick="addToCart('BOSTANTEN Fashion Slingbag Women Shoulder Bag', 149.999)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 12.21.51_fda0ae0a.jpg" alt="Bag 3">
+                <h3>BOSTANTEN Tas Cambridge Tas Wanita</h3>
+                <p>IDR 169.999</p>
+                <button onclick="addToCart('BOSTANTEN Tas Cambridge Tas Wanita', 169.999)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 12.23.01_d2c6e815.jpg" alt="Bag 3">
+                <h3>BOSTANTEN Emma Bag Shoulder Bag</h3>
+                <p>IDR 149.999</p>
+                <button onclick="addToCart('BOSTANTEN Emma Bag Shoulder Bag', 149.999)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 12.24.02_83c01d7e.jpg" alt="Bag 3">
+                <h3>BOSTANTEN Tote Bag Wanita Shoulder Bag</h3>
+                <p>IDR 169.999</p>
+                <button onclick="addToCart('BOSTANTEN Tote Bag Wanita Shoulder Bag', 169.999)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 12.24.56_1ba941c6.jpg" alt="Bag 3">
+                <h3>BOSTANTEN Livy Bag Women Shoulder Bag</h3>
+                <p>IDR 159.999</p>
+                <button onclick="addToCart('BOSTANTEN Livy Bag Women Shoulder Bag', 159.999)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 10.54.11_77cc24ed.jpg" alt="Bag 1">
+                <h3>Tas C Handbag C22 Mini Black GHW Bag Slingbag</h3>
+                <p>IDR 7.614.000</p>
+                <button onclick="addToCart('Tas C Handbag C22 Mini Black GHW Bag Slingbag', 7614000)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 10.55.35_c301d55c.jpg" alt="Bag 2">
+                <h3>Chanel 25P New Rivet Bucket Bag Handbag</h3>
+                <p>IDR 1.304.500</p>
+                <button onclick="addToCart('Chanel 25P New Rivet Bucket Bag Handbag', 1304500)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 10.57.04_c61701af.jpg" alt="Bag 3">
+                <h3>Chanel Cosmetic Bag With Metal Chain Makeup</h3>
+                <p>IDR 1.197.000</p>
+                <button onclick="addToCart('Chanel Cosmetic Bag With Metal Chain Makeup', 1197000)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 10.58.19_5bb4b571.jpg" alt="Bag 3">
+                <h3>Chanel Crossbody Bucket Bag Shoulder Bag</h3>
+                <p>IDR 1.220.500</p>
+                <button onclick="addToCart('Chanel Crossbody Bucket Bag Shoulder Bag', 1220500)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 12.14.21_b7ad289e.jpg" alt="Bag 3">
+                <h3>New 25bag Hobo Ball-grained Cowhide Women's Shoulder Bag</h3>
+                <p>IDR 1.622.880</p>
+                <button onclick="addToCart('New 25bag Hobo Ball-grained Cowhide Womens Shoulder Bag', 1622880)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 12.18.02_5efe3c30.jpg" alt="Bag 3">
+                <h3>CHANEL 24 New Kelly chain bag</h3>
+                <p>IDR 1.078.000</p>
+                <button onclick="addToCart('CHANEL 24 New Kelly chain bag', 1078000)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 12.52.55_14013023.jpg" alt="Bag 1">
+                <h3>Coach Tabby Shoulder Bag 26 With Signature Canvas Chalk Tan Balck</h3>
+                <p>IDR 1.048.100</p>
+                <button onclick="addToCart('Coach Tabby Shoulder Bag 26 With Signature Canvas Chalk Tan Balck', 1048100)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 12.54.04_25a7b479.jpg" alt="Bag 2">
+                <h3>Coach Carmen Shoulder Bag Women Coach Package</h3>
+                <p>IDR 1.211.660</p>
+                <button onclick="addToCart('Coach Carmen Shoulder Bag Women Coach Package', 1211660)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 12.55.48_08fd020e.jpg" alt="Bag 3">
+                <h3>Coach Signature Mini Sierra Satchel Coach Handbag  Shoulder Bag Tas Wanita</h3>
+                <p>IDR 1.236.100</p>
+                <button onclick="addToCart('Coach Signature Mini Sierra Satchel Coach Handbag  Shoulder Bag Tas Wanita', 1236100)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 12.45.13_928a05a8.jpg" alt="Bag 1">
+                <h3>CORALDAISY Tas Wanita Slingbag Shoulder Bag</h3>
+                <p>IDR 119.999</p>
+                <button onclick="addToCart('CORALDAISY Tas Wanita Slingbag Shoulder Bag', 119.999)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 12.46.05_ce565cd3.jpg" alt="Bag 2">
+                <h3>CORALDAISY Tas Wanita Slingbag Shoulder Bag</h3>
+                <p>IDR 109.249</p>
+                <button onclick="addToCart('CORALDAISY Tas Wanita Slingbag Shoulder Bag', 109.249)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 12.47.04_677b0b24.jpg" alt="Bag 3">
+                <h3>CORALDAISY Tas Wanita Shoulder Bag Rantai Bag Fashion</h3>
+                <p>IDR 109.278</p>
+                <button onclick="addToCart('CORALDAISY Tas Wanita Shoulder Bag Rantai Bag Fashion', 109.278)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 12.48.12_007f88fd.jpg" alt="Bag 3">
+                <h3>CORALDAISY Tas Wanita Shoulder Bag Slingbag</h3>
+                <p>IDR 109.999</p>
+                <button onclick="addToCart('CORALDAISY Tas Wanita Shoulder Bag Slingbag', 109.999)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 12.50.14_9d95a939.jpg" alt="Bag 3">
+                <h3>CORALDAISY Tas Wanita Shoulder Bag Slingbag 3 in 1</h3>
+                <p>IDR 101.749</p>
+                <button onclick="addToCart('CORALDAISY Tas Wanita Shoulder Bag Slingbag 3 in 1', 101.749)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 12.51.15_b9512aba.jpg" alt="Bag 3">
+                <h3>CORALDAISY Tas Wanita Tas Selempang Shoulder Bag</h3>
+                <p>IDR 94.249</p>
+                <button onclick="addToCart('CORALDAISY Tas Wanita Tas Selempang Shoulder Bag', 94.249)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 10.16.54_112b3189.jpg" alt="Bag 1">
+                <h3>Tas C Dor Sad dle 25 cm Red Epsom Calfskin Leather</h3>
+                <p>IDR 1.987.900</p>
+                <button onclick="addToCart('Tas C Dor Sad dle 25 cm Red Epsom Calfskin Leather', 1987900)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 10.16.54_a0ff40cf.jpg" alt="Bag 2">
+                <h3>Tas C Dor Di Jojoy Micro 16 cm Lambskin Leather</h3>
+                <p>IDR 3.256.879</p>
+                <button onclick="addToCart('Tas C Dor Di Jojoy Micro 16 cm Lambskin Leather', 3256879)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 10.16.54_bfcd4096.jpg" alt="Bag 3">
+                <h3>Tas C Dor La dyy 24 cm Black Lambskin Leather</h3>
+                <p>IDR 2.875.000</p>
+                <button onclick="addToCart('Tas C Dor La dyy 24 cm Black Lambskin Leather', 2875000)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 10.16.55_624179ac.jpg" alt="Bag 3">
+                <h3>Tas C Dor Sad dle Obli que 18 cm Blue</h3>
+                <p>IDR 1.094.980</p>
+                <button onclick="addToCart('Tas C Dor Sad dle Obli que 18 cm Blue', 1094980)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 10.24.44_97705b77.jpg" alt="Bag 3">
+                <h3>Tas C Dor La dyy Mini 17 cm Lotus Pearl Lambskin Original Leather</h3>
+                <p>IDR 6.987.000</p>
+                <button onclick="addToCart('Tas C Dor La dyy Mini 17 cm Lotus Pearl Lambskin Original Leather', 6987000)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 10.27.11_67ecacea.jpg" alt="Bag 3">
+                <h3>Tas C Dor My Dio 21 cm Taupe Lambskin Leather</h3>
+                <p>IDR 1.200.500</p>
+                <button onclick="addToCart('Tas C Dor My Dio 21 cm Taupe Lambskin Leather', 1200500)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 10.30.39_0518fc69.jpg" alt="Bag 1">
+                <h3>GG Ophidia GG Supreme Shoulder Bag Beige Ebony</h3>
+                <p>IDR 2.345.000</p>
+                <button onclick="addToCart('GG Ophidia GG Supreme Shoulder Bag Beige Ebony', 2345000)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 10.32.57_450a24b0.jpg" alt="Bag 2">
+                <h3>GG Marmont Small Cross-body Bag - Black 100% Authentic</h3>
+                <p>IDR 1.098.000</p>
+                <button onclick="addToCart('GG Marmont Small Cross-body Bag - Black 100% Authentic', 1098000)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 10.34.47_efc42574.jpg" alt="Bag 3">
+                <h3>GG Marmont Mini Half-Moon Leather Shoulder Bag Black GHW</h3>
+                <p>IDR 3.456.789</p>
+                <button onclick="addToCart('GG Marmont Mini Half-Moon Leather Shoulder Bag Black GHW', 3456789)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 12.36.06_d887fe43.jpg" alt="Bag 1">
+                <h3>JIMS HONEY Tas Selempang Wanita Vita Bag</h3>
+                <p>IDR 148.200</p>
+                <button onclick="addToCart('JIMS HONEY Tas Selempang Wanita Vita Bag', 148.200)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 12.37.14_dc92fd35.jpg" alt="Bag 2">
+                <h3>JIMS HONEY Tas Selempang Wanita Jolly Bag Kulit Sintetis</h3>
+                <p>IDR 126.600</p>
+                <button onclick="addToCart('JIMS HONEY Tas Selempang Wanita Jolly Bag Kulit Sintetis', 126.600)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 12.38.25_ac09bc2e.jpg" alt="Bag 3">
+                <h3>JIMS HONEY Tas Selempang Bahu Wanita Chaca Bag</h3>
+                <p>IDR 122.100</p>
+                <button onclick="addToCart('JIMS HONEY Tas Selempang Bahu Wanita Chaca Bag', 122.100)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 12.39.35_526049d9.jpg" alt="Bag 3">
+                <h3>JIMS HONEY Tas Selempang Bahu Vintage Elora Bag</h3>
+                <p>IDR 145.500</p>
+                <button onclick="addToCart('JIMS HONEY Tas Selempang Bahu Vintage Elora Bag', 145.500)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 12.40.32_d7995fb4.jpg" alt="Bag 3">
+                <h3>JIMS HONEY Tas Selempang Abigail Bag Kulit Sintetis</h3>
+                <p>IDR 131.100</p>
+                <button onclick="addToCart('JIMS HONEY Tas Selempang Abigail Bag Kulit Sintetis', 131.100)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 12.41.34_529c3e98.jpg" alt="Bag 3">
+                <h3>JIMS HONEY Tas Selempang Wanita Serena Bag</h3>
+                <p>IDR 118.500</p>
+                <button onclick="addToCart('JIMS HONEY Tas Selempang Wanita Serena Bag', 118.500)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 10.38.13_6f88466e.jpg" alt="Bag 1">
+                <h3>Pochette Metis Bag Presbiopia</h3>
+                <p>IDR 1.110.036</p>
+                <button onclick="addToCart('Pochette Metis Bag Presbiopia', 1110036)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 10.44.26_afb4013a.jpg" alt="Bag 2">
+                <h3>LOOP Tas Wanita Top Handle Bag</h3>
+                <p>IDR 1.079.120</p>
+                <button onclick="addToCart('LOOP Tas Wanita Top Handle Bag', 1079120)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 10.46.02_4b2f0e7f.jpg" alt="Bag 3">
+                <h3>Carryall Tas Wanita Top Handle Bag</h3>
+                <p>IDR 1.011.440</p>
+                <button onclick="addToCart('Carryall Tas Wanita Top Handle Bag', 1011440)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 10.47.46_696dd990.jpg" alt="Bag 3">
+                <h3>NEVERFULL Bag Presbiopia</h3>
+                <p>IDR 974.686</p>
+                <button onclick="addToCart('NEVERFULL Bag Presbiopia', 974.686)">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="WhatsApp Image 2025-05-11 at 10.49.33_3aaabb32.jpg" alt="Bag 3">
+                <h3>Cannes Bag Presbiopia</h3>
+                <p>IDR 1.084.384</p>
+                <button onclick="addToCart('Cannes Bag Presbiopia', 1084384)">Add to Cart</button>
+            </div>
+        <div class="product-item">
+            <img src="WhatsApp Image 2025-05-11 at 12.26.33_558c8669.jpg" alt="Bag 1">
+            <h3>MOSSDOOM Tas Bahu Danica Bag Serut Wanita Elegan</h3>
+            <p>IDR 176.460</p>
+            <button onclick="addToCart('MOSSDOOM Tas Bahu Danica Bag Serut Wanita Elegan', 176.460)">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="WhatsApp Image 2025-05-11 at 12.27.37_a03ce7c1.jpg" alt="Bag 2">
+            <h3>MOSSDOOM Tas Wanita Kattie Bag Slingbag Tas Underarm</h3>
+            <p>IDR 154.900</p>
+            <button onclick="addToCart('MOSSDOOM Tas Wanita Kattie Bag Slingbag Tas Underarm', 154.900)">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="WhatsApp Image 2025-05-11 at 12.28.42_3f2d05eb.jpg" alt="Bag 3">
+            <h3>MOSSDOOM Tas Wanita Eletta Bag Mode Retro Elegan</h3>
+            <p>IDR 179.000</p>
+            <button onclick="addToCart('MOSSDOOM Tas Wanita Eletta Bag Mode Retro Elegan', 179.000)">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="WhatsApp Image 2025-05-11 at 12.30.25_0d516de6.jpg" alt="Bag 3">
+            <h3>MOSSDOOM Tas Wanita Zenith Bag</h3>
+            <p>IDR 174.900</p>
+            <button onclick="addToCart('MOSSDOOM Tas Wanita Zenith Bag', 174.900)">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="WhatsApp Image 2025-05-11 at 12.31.34_4f6ed73c.jpg" alt="Bag 3">
+            <h3>MOSSDOOM Tas Tote Bag Alicia Bag Wanita</h3>
+            <p>IDR 189.000</p>
+            <button onclick="addToCart('MOSSDOOM Tas Tote Bag Alicia Bag Wanita', 189.000)">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="WhatsApp Image 2025-05-11 at 12.32.58_b3e3622a.jpg" alt="Bag 3">
+            <h3>MOSSDOOM Tas Ransel Sierra Backpack Mini Backpack Elegan Multifungsi</h3>
+            <p>IDR 478.460</p>
+            <button onclick="addToCart('MOSSDOOM Tas Ransel Sierra Backpack Mini Backpack Elegan Multifungsi', 478.460)">Add to Cart</button>
+        </div>
+        </div>
+    </div>
+    <script src="cart.js"></script>
+</section>
+</body>
+</html>
